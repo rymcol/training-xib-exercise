@@ -14,7 +14,51 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-a7-0KT">
+                    <rect key="frame" x="150" y="109" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="495-2w-Hfd"/>
+                        <constraint firstAttribute="width" constant="300" id="69I-oL-DQm"/>
+                    </constraints>
+                    <state key="normal" title="Go Back">
+                        <color key="titleColor" red="0.98044380470000003" green="1" blue="0.95121562780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="TG8-01-lgc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xer-Ku-AFk">
+                    <rect key="frame" x="150" y="170" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="gtj-c7-Nsl"/>
+                        <constraint firstAttribute="width" constant="300" id="zaC-yN-t2v"/>
+                    </constraints>
+                    <state key="normal" title="Load Thrid View">
+                        <color key="titleColor" red="0.98044380470000003" green="1" blue="0.95121562780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loadFinalView:" destination="-1" eventType="touchUpInside" id="4By-VR-k97"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.16949329060000001" green="0.1431944134" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="zSe-a7-0KT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="90Z-2p-529"/>
+                <constraint firstItem="xer-Ku-AFk" firstAttribute="top" secondItem="zSe-a7-0KT" secondAttribute="bottom" constant="31" id="bZU-FI-xHg"/>
+                <constraint firstItem="xer-Ku-AFk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pri-yl-Cpt"/>
+                <constraint firstItem="zSe-a7-0KT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="109" id="wi5-qg-lSi"/>
+            </constraints>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-mF-5ki">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="30" id="Ohu-89-xGG"/>
+                <constraint firstAttribute="width" constant="300" id="RaD-qD-nlz"/>
+            </constraints>
+            <state key="normal" title="Button">
+                <color key="titleColor" red="0.98044380470000003" green="1" blue="0.95121562780000002" alpha="1" colorSpace="calibratedRGB"/>
+            </state>
+        </button>
     </objects>
 </document>

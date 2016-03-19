@@ -9,6 +9,16 @@
 import UIKit
 
 class FinalVC: UIViewController {
+    
+    var secondVC: SecondVC!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +31,10 @@ class FinalVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func goBack(sender: AnyObject) {
+        secondVC = SecondVC(nibName: "SecondVC", bundle: nil)
+        self.presentViewController(secondVC, animated: true, completion: nil)
     }
-    */
+
 
 }

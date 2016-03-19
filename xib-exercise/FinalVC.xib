@@ -14,7 +14,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AS-Vq-ZPP">
+                    <rect key="frame" x="150" y="137" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="69O-0c-OJZ"/>
+                        <constraint firstAttribute="height" constant="30" id="9DZ-Kd-ukZ"/>
+                    </constraints>
+                    <state key="normal" title="Go Back">
+                        <color key="titleColor" red="0.98044380470000003" green="1" blue="0.95121562780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="rPd-jg-LZY"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.65907678039999995" green="0.38057183970000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="1AS-Vq-ZPP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Boe-x9-7Df"/>
+                <constraint firstItem="1AS-Vq-ZPP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="137" id="O5Z-Xr-8oo"/>
+            </constraints>
         </view>
     </objects>
 </document>

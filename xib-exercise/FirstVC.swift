@@ -10,9 +10,10 @@ import UIKit
 
 class FirstVC: UIViewController {
     
+    var secondVC: SecondVC!
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        print("I definitely Initialized")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -21,13 +22,11 @@ class FirstVC: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print("I might load")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("Totally loaded bro")
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +34,10 @@ class FirstVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loadSecondView(sender: UIButton) {
+        secondVC = SecondVC(nibName: "SecondVC", bundle: NSBundle.mainBundle())
+        self.presentViewController(secondVC, animated: true, completion: nil)
+    }
 
 }
 
